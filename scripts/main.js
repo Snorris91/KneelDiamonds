@@ -1,6 +1,8 @@
 import { SizeOptions } from "./Size.js"
 import { StyleOptions } from "./Style.js"
 import { MetalOptions } from "./metalOptions.js"
+import { SaveOrder } from "./submission.js"
+import { Orders } from "./Orders.js"
 
 const container = document.querySelector("#container")
 
@@ -9,6 +11,8 @@ const render = async() => {
     const metalOptionsHtml = await MetalOptions()
     const sizeOptionsHtml = await SizeOptions()
     const styleOptionHtml = await StyleOptions()
+    const saveButton = await SaveOrder()
+    const orderHtml = await Orders()
     container.innerHTML = `
         <h1>Kneel Diamonds</h1>
 
@@ -25,18 +29,22 @@ const render = async() => {
             <h2>Styles</h2>
             ${styleOptionHtml}
             </section>
+            
         </article>
 
         <article class="orders">
-        
+        ${saveButton}
         </article>
         
         <article class="customOrders">
         <h2>Custom Jewelry Orders</h2>
+        ${orderHtml}
         </article>
     `
 
 
 }
-// ${metalOptionsHtml}
+
+document.addEventListener("TheClickening", render)
+
 render()
