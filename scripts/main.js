@@ -12,7 +12,7 @@ const render = async() => {
     const sizeOptionsHtml = await SizeOptions()
     const styleOptionHtml = await StyleOptions()
     const saveButton = await SaveOrder()
-    const orderHtml = await Orders()
+    //const orderHtml = await Orders()
     container.innerHTML = `
         <h1>Kneel Diamonds</h1>
 
@@ -38,7 +38,7 @@ const render = async() => {
         
         <article class="customOrders">
         <h2>Custom Jewelry Orders</h2>
-        ${orderHtml}
+       
         </article>
     `
 
