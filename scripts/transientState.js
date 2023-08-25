@@ -8,19 +8,23 @@ const transientState = {
 
 export const setMetalOptions = (chosenMetal) => {
     transientState.metalId = chosenMetal
+    
     console.log(transientState)
 }
 export const setSizeOption = (chosenSize) => {
     transientState.sizeId = chosenSize
+    
     console.log(transientState)
 }
 export const setStyleOption = (chosenStyle) => {
     transientState.styleId = chosenStyle
+    
     console.log(transientState)
 }
 
 export const setJewelID = (chosenJewel) => {
     transientState.jewelId = chosenJewel
+    
     console.log(transientState)
 }
 
@@ -37,5 +41,10 @@ export const placeOrder = async () => {
 
     const customEvent = new CustomEvent("TheClickening")
 
+    document.dispatchEvent(customEvent)
+}
+
+export const buttonClicked = () => {
+    const customEvent = new CustomEvent("checking")
     document.dispatchEvent(customEvent)
 }

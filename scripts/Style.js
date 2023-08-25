@@ -10,7 +10,7 @@ export const StyleOptions = async () => {
 
     const styleArr = styles.map((style) => {
       return `<div>
-          <input type="radio" name="style" value="${style.id}" />${style.style}
+          <input type="radio" name="style" value="${style.id}" checked="checked" />${style.style}
           </div>`;
     });
     styleHTML += styleArr.join("");

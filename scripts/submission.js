@@ -1,8 +1,9 @@
-import { placeOrder } from "./transientState.js"
+import { buttonClicked, placeOrder } from "./transientState.js"
 
 const handleSubmissionClick = (clickEvent) => {
     if (clickEvent.target.id === "saveSubmission") {
         placeOrder()
+        buttonClicked()
     }
 }
 

@@ -8,7 +8,7 @@ export const jewelChoice = async () => {
 
     let jewelsHTML = `<h2>Please Choose A Design</h2>`
     const jewelsArr = jewels.map((jewel) => {
-        return `<input type="radio" name="jewel" value="${jewel.id}" />${jewel.name}`
+        return `<input type="radio" name="jewel" value="${jewel.id}" checked="checked" />${jewel.name}`
     })
     jewelsHTML += jewelsArr.join("")
     return jewelsHTML
@@ -21,3 +21,4 @@ const handleJewel = (changeEvent) => {
         setJewelID(converted)
     }
 }
+

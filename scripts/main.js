@@ -51,5 +51,5 @@ const render = async() => {
 }
 
 document.addEventListener("TheClickening", render)
-
+document.addEventListener("checking", render)
 render()

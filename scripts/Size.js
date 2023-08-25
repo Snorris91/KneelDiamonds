@@ -10,7 +10,7 @@ export const SizeOptions = async () => {
     let sizeHtml = ``
     const sizeArr = sizes.map((size) => {
         return `<div>
-        <input type="radio" name="size" value="${size.id}" />${size.carets} Carets
+        <input type="radio" name="size" value="${size.id}" checked="checked" />${size.carets} Carets
         </div>`
     }
     )
